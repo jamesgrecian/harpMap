@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-",
-  screenshot.opts = list(delay = 5)
+  screenshot.opts = list(delay = 10)
 )
 ```
 
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 The app is hosted on shinyapps.io and can be accessed below:
 
 ```{r, echo = FALSE}
-knitr::include_app("https://jamesgrecian.shinyapps.io/harpmap/", height = "400px")
+knitr::include_url("https://jamesgrecian.shinyapps.io/harpmap/", height = "400px")
 ```
 
 
