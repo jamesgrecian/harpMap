@@ -1,0 +1,27 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# harpMap
+
+**harpMap** is a shiny app that visualises harp seal telemetry data based around `leaflet`
+
+```{r}
+knitr::include_app("https://jamesgrecian.shinyapps.io/harpmap/", height = "400px")
+```
+
+
