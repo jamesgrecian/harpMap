@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 # harpMap
 
-**harpMap** is a shiny app that visualises harp seal telemetry data based around `leaflet`
+**harpMap** is a shiny app based around `leaflet` that visualises harp seal telemetry data
 
 ```{r}
 knitr::include_app("https://jamesgrecian.shinyapps.io/harpmap/", height = "400px")
