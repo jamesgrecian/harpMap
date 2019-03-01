@@ -6,8 +6,6 @@ harpMap
 
 **harpMap** is a shiny app based around `leaflet` that visualises harp seal telemetry data
 
-``` r
-knitr::include_app("https://jamesgrecian.shinyapps.io/harpmap/", height = "400px")
-```
+The app is hosted on shinyapps.io and can be accessed below:
 
 [![](README-unnamed-chunk-2-1.png)](https://jamesgrecian.shinyapps.io/harpmap/)
