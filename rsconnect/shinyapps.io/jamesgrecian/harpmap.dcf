@@ -5,6 +5,6 @@ account: jamesgrecian
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 753358
-bundleId: 1937441
+bundleId: 1960178
 url: https://jamesgrecian.shinyapps.io/harpmap/
-when: 1552506123.51242
+when: 1553351687.2663
