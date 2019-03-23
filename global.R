@@ -14,6 +14,7 @@ require(lubridate)
 library(raster)
 require(RCurl)
 require(httr)
+require(rgdal)
 
 # Load data from SMRU server and format for plotting using leaflet
 # define data url
