@@ -44,7 +44,9 @@ server <- function(input, output, session) {
                 colors = viridis_pal(option = "D")(length(unique(harps$id))),
                 labels = unique(harps$id)) %>%
       setView(lng = -60 , lat = 45, zoom = 6)
+    
     m
+    
     })
 }
 

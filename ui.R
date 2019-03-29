@@ -16,7 +16,7 @@ ui <- fluidPage(
     "of the Canadian Department for Fisheries and Oceans deployed 10 satellite transmitters on harp seals in the Gulf of St Lawrence."),
   p("These tags allow the scientists to track the seals as they migrate north to follow the seasonal sea ice retreat."),
   br(),
-  leafletOutput("mymap", height = 800),
+  leafletOutput("mymap", height = 600) %>% withSpinner(type = 7),
   br(),
   p("This work was made possible by a UK-Canada Arctic Partnership Bursary from the ",
     a("NERC Arctic Office",

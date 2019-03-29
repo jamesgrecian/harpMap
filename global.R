@@ -15,6 +15,8 @@ library(raster)
 require(RCurl)
 require(httr)
 require(rgdal)
+#devtools::install_github('andrewsali/shinycssloaders')
+require(shinycssloaders)
 
 # Load data from SMRU server and format for plotting using leaflet
 # define data url
