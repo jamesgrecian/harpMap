@@ -43,7 +43,10 @@ server <- function(input, output, session) {
       addLegend(position = 'bottomright',
                 colors = viridis_pal(option = "D")(length(unique(harps$id))),
                 labels = unique(harps$id)) %>%
-      setView(lng = -60 , lat = 45, zoom = 6)
+      addScaleBar() %>%
+      setView(lng = mean(harps$Longitude, na.rm = T),
+              lat = mean(harps$Latitude, na.rm = T),
+              zoom = 6) 
     
     m
     

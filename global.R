@@ -52,6 +52,14 @@ harps <- harps %>% rename("id" = id,
                       "Longitude" = lon,
                       "Latitude" = lat)
 
+#fitted <- drop_read_csv("hp6_fitted_locs.csv") %>% as_tibble()
+#fitted <- fitted %>% rename("datetime_utc" = date,
+#                            "Longitude" = lon,
+#                            "Latitude" = lat)
+#harps <- fitted
+
+
+
 # set up palette
 pal <- colorFactor(viridis_pal(option = "D")(length(unique(harps$id))),
                    domain = harps$id)
