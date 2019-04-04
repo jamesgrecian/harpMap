@@ -17,7 +17,7 @@ require(lubridate)
 
 # Download data from SMRU and unzip .mdb
 download.file("http://gatty:SOI@www.smru.st-andrews.ac.uk/protected/hp6/db/hp6.zip", "~/hp6.zip")
-unzip("~/hp6.zip")
+unzip("~/hp6.zip", exdir = "~/", overwrite = T)
 
 # Load in data from .mdb
 dat <- Hmisc::mdb.get("~/hp6.mdb",  tables = "diag") %>% as_tibble()
