@@ -11,8 +11,7 @@
 
 # Load libraries
 require(Hmisc)
-require(tidyverse)
-require(lubridate)
+require(dplyr)
 require(rdrop2)
 
 # Download data from SMRU and unzip .mdb
@@ -34,14 +33,14 @@ dat <- dat %>% rename(id = REF,
                       eor = ELLIPSE.ORIENTATION)
 
 # Format date time
-dat <- dat %>% mutate(date = mdy_hms(date, tz = "UTC"))
+dat <- dat %>% mutate(date = as.POSIXct(dat$date, "%m/%d/%y %H:%M:%S", tz = "UTC"))
 # Filter out data prior to deployment
 dat <- dat %>% filter(date > "2019-03-22 00:00:01")
 # Order by time
 dat <- dat %>% arrange(id, date)
 
 # Write formatted dataframe locally
-write_csv(dat, "~/hp6_raw_locs.csv")
+write.csv(dat, "~/hp6_raw_locs.csv")
 # Upload to dropbox
 drop_upload("~/hp6_raw_locs.csv")
 
