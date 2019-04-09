@@ -42,5 +42,5 @@ dat <- dat %>% arrange(id, date)
 # Write formatted dataframe locally
 write.csv(dat, "~/hp6_raw_locs.csv")
 # Upload to dropbox
+drop_auth(rdstoken = "/home/james/harpMap/token.rds")
 drop_upload("~/hp6_raw_locs.csv")
-
