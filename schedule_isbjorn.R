@@ -4,10 +4,13 @@
 
 # Set this script to run every 6 hours using crontab...
 # crontab -e
-# 1 */6 * * * Rscript /schedule_isbjorn.R
+# 0cd */6 * * * Rscript /schedule_isbjorn.R
 # To remove try...
 # crontab -l
 # crontab -e
+
+# Point to local libraries
+.libPaths("/home/james/R/x86_64-redhat-linux-gnu-library/3.5")
 
 # Load libraries
 require(Hmisc)
