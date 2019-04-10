@@ -10,7 +10,10 @@
 # crontab -e
 
 # Point to local libraries
-.libPaths("/home/james/R/x86_64-redhat-linux-gnu-library/3.5")
+#.libPaths("/home/james/R/x86_64-redhat-linux-gnu-library/3.5")
+
+#"/usr/lib64/R/library"
+#"/usr/share/R/library" 
 
 # Load libraries
 require(Hmisc)
