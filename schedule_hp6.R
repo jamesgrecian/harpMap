@@ -43,21 +43,23 @@ dat <- dat %>% filter(date > "2019-03-22 00:00:01")
 dat <- dat %>% arrange(id, date)
 
 # Recode location class for prefilter algoritm
-dat <- dat %>% mutate(lc = factor(lc))
-dat <- dat %>% mutate(lc = recode_factor(lc,
-                                  `0` = "A",
-                                  `-1` = "B",
-                                  `-2` = "Z"))
+#dat <- dat %>% mutate(lc = factor(lc))
+#dat %>% mutate(lc = recode_factor(lc, "-3" = "-9"))
+#dat <- dat %>% mutate(lc = recode_factor(lc,
+#                                  `0` = "0",
+#                                  `-1` = "A",
+#                                  `-2` = "B",
+#                                  `-3` = "Z"))
 
 # Fit continous time correlated random walk using least squares data
-fls <- fit_ssm(dat, model = "crw", time.step = 6)
+#fls <- fit_ssm(dat, model = "crw", time.step = 6)
 
 # Extract fitted values from model
-out <- pluck(fls, "fitted")
+#out <- pluck(fls, "fitted")
 
 # Write formatted dataframe and fitted values...
 write_csv(dat, "~/Dropbox/hp6_raw_locs.csv")
-write_csv(out, "~/Dropbox/hp6_fitted_locs.csv")
+#write_csv(out, "~/Dropbox/hp6_fitted_locs.csv")
 
 
 

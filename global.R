@@ -61,7 +61,7 @@ harps <- harps %>% rename("id" = id,
 
 
 # set up palette
-pal <- colorFactor(viridis_pal(option = "D")(length(unique(harps$id))),
+pal <- colorFactor(viridis_pal(option = "D")(2*length(unique(harps$id)))[(length(unique(harps$id))+1):(2*length(unique(harps$id)))],
                    domain = harps$id)
 
 # define function to group tracks by animal id

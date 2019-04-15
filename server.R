@@ -41,7 +41,7 @@ server <- function(input, output, session) {
                    arrange(desc(datetime_utc))
                  %>% slice(1)) %>%
       addLegend(position = 'bottomright',
-                colors = viridis_pal(option = "D")(length(unique(harps$id))),
+                colors = viridis_pal(option = "D")(2*length(unique(harps$id)))[(length(unique(harps$id))+1):(2*length(unique(harps$id)))],
                 labels = unique(harps$id)) %>%
       addScaleBar() %>%
       setView(lng = mean(harps$Longitude, na.rm = T),

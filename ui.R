@@ -15,6 +15,11 @@ ui <- fluidPage(
       href = "http://www.dfo-mpo.gc.ca/science/coe-cde/cemam/index-eng.html"),
     "of the Canadian Department for Fisheries and Oceans deployed 10 satellite transmitters on harp seals in the Gulf of St Lawrence."),
   p("These tags allow the scientists to track the seals as they migrate north to follow the seasonal sea ice retreat."),
+  p("Below are the latest positions of these seals transmitted by the tags along with the individual movement paths.
+    The white shading represents the current sea ice conditions in the region using data taken from ",
+    a("NSIDC",
+      href = "https://nsidc.org"),
+    "."),
   br(),
   leafletOutput("mymap", height = 600) %>% withSpinner(type = 7),
   br(),
