@@ -84,6 +84,8 @@ grouped_coords <- function(coord, group, order) {
 # Load in sea ice data from NSIDC
 #Use RCurl library to query FTP server for most recent data
 date <- as.Date(Sys.Date(), "%m/%d/%y")
+#If 1st of month use last months data as it won't be processed yet...
+if (day(date) == 1){date <- date-1}
 mo <- paste0(strftime(date,"%m"), "_", strftime(date,"%b"))
 yr <- year(date)
 url = "ftp://anonymous:wjg5@sidads.colorado.edu/DATASETS/NOAA/G02135/north/daily/geotiff/"
